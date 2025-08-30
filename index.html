@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brian Niergarth — AI Development • Systems Architecture • Automation • BI</title>
+  <meta name="description" content="AI development, system architecture, automation engineering, and business intelligence. Building intelligent, reliable, and scalable systems." />
+  <meta name="author" content="Brian Niergarth" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI Development • Systems Architecture • Automation • BI" />
+  <meta property="og:description" content="Building intelligent, reliable, and scalable systems." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://dummyimage.com/1200x630/0f172a/ffffff&text=Brian+Niergarth" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Development • Systems Architecture • Automation • BI" />
+  <meta name="twitter:description" content="Building intelligent, reliable, and scalable systems." />
+
+  <!-- Favicon (optional: replace with your own) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+
+  <!-- TailwindCSS (CDN for simplicity) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config & color theme
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: {
+              50:'#f6f7fb', 100:'#eaeefa', 200:'#cfd7f0', 300:'#aab7e1', 400:'#7a90ce', 500:'#4f6fbd', 600:'#3559ad', 700:'#2a478c', 800:'#21386e', 900:'#1b2e5c'
+            },
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Smooth fade for hero bg gradient */
+    .fade-edge{mask-image:linear-gradient(180deg,black 85%,transparent)}
+  </style>
+
+  <!-- Schema.org (Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Brian Niergarth",
+    "jobTitle": "AI Developer & Systems Architect",
+    "url": "https://nautilusprog.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/brian-niergarth-ab93617a/",
+      "https://github.com/NautilusProg"
+    ],
+    "knowsAbout": ["Artificial Intelligence","Automation","ServiceNow","Power BI","Systems Architecture","SCCM","Active Directory"]
+  }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-indigo-600 selection:text-white">
+  <!-- Sticky Nav -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-slate-950/70 border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="font-semibold tracking-tight text-white">BN<span class="text-indigo-400">/</span>AI</a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#services" class="hover:text-indigo-300">Specialties</a>
+        <a href="#projects" class="hover:text-indigo-300">Projects</a>
+        <a href="#about" class="hover:text-indigo-300">About</a>
+        <a href="#blog" class="hover:text-indigo-300">Insights</a>
+        <a href="#contact" class="hover:text-indigo-300">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/NautilusProg" class="hidden sm:inline-block px-3 py-1.5 rounded-full border border-white/10 hover:border-indigo-400/40 hover:text-indigo-300">GitHub</a>
+        <button id="themeToggle" class="p-2 rounded-lg border border-white/10 hover:border-indigo-400/40" title="Toggle theme">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-indigo-600/20 via-transparent to-transparent blur-3xl"></div>
+    <div class="max-w-6xl mx-auto px-4 pt-16 pb-8 md:pt-24 md:pb-16 relative">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
+            AI Development & <span class="text-indigo-400">Intelligent</span> Systems Architecture
+          </h1>
+          <p class="mt-4 text-slate-300 text-lg leading-relaxed">
+            I build automation that <span class="text-white">reduces toil</span>, BI pipelines that <span class="text-white">illuminate decisions</span>, and AI agents that <span class="text-white">ship real outcomes</span>.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#projects" class="px-5 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 font-medium">View Projects</a>
+            <a href="#contact" class="px-5 py-3 rounded-xl border border-white/10 hover:border-indigo-400/40">Start a Conversation</a>
+          </div>
+          <ul class="mt-6 flex flex-wrap gap-2 text-xs text-slate-400">
+            <li class="px-2 py-1 rounded bg-white/5">LLM Agents</li>
+            <li class="px-2 py-1 rounded bg-white/5">ServiceNow Automations</li>
+            <li class="px-2 py-1 rounded bg-white/5">Power BI</li>
+            <li class="px-2 py-1 rounded bg-white/5">SCCM • AD • PDQ</li>
+            <li class="px-2 py-1 rounded bg-white/5">Python • PowerShell</li>
+          </ul>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6 shadow-2xl fade-edge">
+            <div class="grid grid-cols-2 gap-4 h-full">
+              <div class="space-y-4">
+                <div class="p-4 rounded-xl bg-black/30 border border-white/10">
+                  <p class="text-xs text-slate-400">Agent Workflow</p>
+                  <p class="font-mono text-sm">Plan → Act → Verify</p>
+                </div>
+                <div class="p-4 rounded-xl bg-black/30 border border-white/10">
+                  <p class="text-xs text-slate-400">Automation</p>
+                  <p class="font-mono text-sm">SNow • AD • SCCM</p>
+                </div>
+                <div class="p-4 rounded-xl bg-black/30 border border-white/10">
+                  <p class="text-xs text-slate-400">Observability</p>
+                  <p class="font-mono text-sm">Grafana • InfluxDB</p>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div class="p-4 rounded-xl bg-black/30 border border-white/10">
+                  <p class="text-xs text-slate-400">BI</p>
+                  <p class="font-mono text-sm">Power BI • DAX</p>
+                </div>
+                <div class="p-4 rounded-xl bg-black/30 border border-white/10">
+                  <p class="text-xs text-slate-400">Cloud</p>
+                  <p class="font-mono text-sm">Azure • GitHub</p>
+                </div>
+                <div class="p-4 rounded-xl bg-black/30 border border-white/10">
+                  <p class="text-xs text-slate-400">Languages</p>
+                  <p class="font-mono text-sm">Python • PowerShell</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-slate-500 mt-2">Swap this for a real image or diagram later.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services / Specialties -->
+  <section id="services" class="py-16 md:py-24 border-t border-white/5 bg-gradient-to-b from-transparent to-slate-900/30">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-4xl font-bold">Specialties</h2>
+      <p class="mt-3 text-slate-300 max-w-2xl">Where I do my best work across AI, systems, automation, and analytics.</p>
+
+      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1 -->
+        <div class="rounded-2xl border border-white/10 p-5 bg-white/5">
+          <h3 class="font-semibold">AI Development</h3>
+          <p class="mt-2 text-sm text-slate-300">LLM agents, retrieval, and task orchestration that deliver measurable outcomes.</p>
+          <ul class="mt-3 text-xs text-slate-400 list-disc list-inside space-y-1">
+            <li>Agent workflows & evaluators</li>
+            <li>Prompt/Tool design</li>
+            <li>Python-first delivery</li>
+          </ul>
+        </div>
+        <!-- Card 2 -->
+        <div class="rounded-2xl border border-white/10 p-5 bg-white/5">
+          <h3 class="font-semibold">Systems Architecture</h3>
+          <p class="mt-2 text-sm text-slate-300">Hybrid cloud, APIs, and secure integrations for reliability at scale.</p>
+          <ul class="mt-3 text-xs text-slate-400 list-disc list-inside space-y-1">
+            <li>Azure & GitHub Actions</li>
+            <li>Event-driven design</li>
+            <li>IdP & Directory aware</li>
+          </ul>
+        </div>
+        <!-- Card 3 -->
+        <div class="rounded-2xl border border-white/10 p-5 bg-white/5">
+          <h3 class="font-semibold">Automation Engineering</h3>
+          <p class="mt-2 text-sm text-slate-300">ServiceNow, SCCM/Intune, AD, PDQ—joined up and hands-off.</p>
+          <ul class="mt-3 text-xs text-slate-400 list-disc list-inside space-y-1">
+            <li>Ticketless flows</li>
+            <li>CMDB sync</li>
+            <li>Ops guardrails</li>
+          </ul>
+        </div>
+        <!-- Card 4 -->
+        <div class="rounded-2xl border border-white/10 p-5 bg-white/5">
+          <h3 class="font-semibold">Business Intelligence</h3>
+          <p class="mt-2 text-sm text-slate-300">Power BI models that turn messy ops data into decisions.</p>
+          <ul class="mt-3 text-xs text-slate-400 list-disc list-inside space-y-1">
+            <li>Data modeling & DAX</li>
+            <li>Forecasting & cohorts</li>
+            <li>Executive dashboards</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl md:text-4xl font-bold">Selected Work</h2>
+          <p class="mt-3 text-slate-300 max-w-2xl">A few representative projects. Replace with real case studies later.</p>
+        </div>
+        <a href="#contact" class="hidden md:inline-block px-4 py-2 rounded-xl border border-white/10 hover:border-indigo-400/40">Let’s Collaborate</a>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project Card Template -->
+        <article class="group rounded-2xl border border-white/10 overflow-hidden bg-white/5">
+          <div class="aspect-[16/9] bg-gradient-to-br from-ink-900 to-slate-900"></div>
+          <div class="p-5">
+            <h3 class="font-semibold">AI-Driven Asset Lifecycle</h3>
+            <p class="mt-2 text-sm text-slate-300">Agentic outreach + ServiceNow tasks to retire or remediate devices at scale.</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs text-slate-400">
+              <li class="px-2 py-1 rounded bg-white/5">Python</li>
+              <li class="px-2 py-1 rounded bg-white/5">ServiceNow</li>
+              <li class="px-2 py-1 rounded bg-white/5">Power BI</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="group rounded-2xl border border-white/10 overflow-hidden bg-white/5">
+          <div class="aspect-[16/9] bg-gradient-to-br from-indigo-900 to-slate-900"></div>
+          <div class="p-5">
+            <h3 class="font-semibold">Predictive Maintenance & Forecasting</h3>
+            <p class="mt-2 text-sm text-slate-300">Lifecycle forecasting using historical snapshot data and cohort analysis.</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs text-slate-400">
+              <li class="px-2 py-1 rounded bg-white/5">Python</li>
+              <li class="px-2 py-1 rounded bg-white/5">DAX</li>
+              <li class="px-2 py-1 rounded bg-white/5">Power BI</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="group rounded-2xl border border-white/10 overflow-hidden bg-white/5">
+          <div class="aspect-[16/9] bg-gradient-to-br from-violet-900 to-slate-900"></div>
+          <div class="p-5">
+            <h3 class="font-semibold">Intelligent ServiceNow Integrations</h3>
+            <p class="mt-2 text-sm text-slate-300">Inbound actions, CMDB enrichments, and zero-touch catalog tasks.</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs text-slate-400">
+              <li class="px-2 py-1 rounded bg-white/5">APIs</li>
+              <li class="px-2 py-1 rounded bg-white/5">Email Inbound</li>
+              <li class="px-2 py-1 rounded bg-white/5">Governance</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 md:py-24 border-y border-white/5 bg-slate-900/40">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10 items-start">
+      <div class="md:col-span-2">
+        <h2 class="text-2xl md:text-4xl font-bold">About</h2>
+        <p class="mt-4 text-slate-300 leading-relaxed">Senior Client Technologies Engineer turned AI/Automation developer. I’m focused on practical AI, robust integrations, and BI that moves the needle. I’ve shipped tools that unify SCCM, AD, PDQ, ServiceNow, and Power BI to manage thousands of devices with smart automation.</p>
+        <ul class="mt-6 grid sm:grid-cols-2 gap-x-8 gap-y-2 text-sm text-slate-300">
+          <li>🔧 Python & PowerShell</li>
+          <li>🧩 Systems & API design</li>
+          <li>📊 Data modeling & DAX</li>
+          <li>🛡️ Security & governance first</li>
+        </ul>
+        <div class="mt-6 flex gap-3">
+          <a href="https://www.linkedin.com/in/brian-niergarth-ab93617a/" class="px-4 py-2 rounded-xl border border-white/10 hover:border-indigo-400/40">LinkedIn</a>
+          <a href="mailto:bniergarth@gmail.com" class="px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10">Email</a>
+        </div>
+      </div>
+      <aside class="rounded-2xl border border-white/10 p-5 bg-white/5">
+        <h3 class="font-semibold">Toolbox</h3>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs text-slate-300">
+          <span class="px-2 py-1 rounded bg-black/30">GitHub Actions</span>
+          <span class="px-2 py-1 rounded bg-black/30">Azure</span>
+          <span class="px-2 py-1 rounded bg-black/30">ServiceNow</span>
+          <span class="px-2 py-1 rounded bg-black/30">SCCM / Intune</span>
+          <span class="px-2 py-1 rounded bg-black/30">Active Directory</span>
+          <span class="px-2 py-1 rounded bg-black/30">PDQ</span>
+          <span class="px-2 py-1 rounded bg-black/30">InfluxDB</span>
+          <span class="px-2 py-1 rounded bg-black/30">Grafana</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Blog / Insights -->
+  <section id="blog" class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-4xl font-bold">Insights</h2>
+      <p class="mt-3 text-slate-300 max-w-2xl">Short notes on patterns, pitfalls, and wins from the field.</p>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <article class="rounded-2xl border border-white/10 p-5 bg-white/5">
+          <h3 class="font-semibold">Designing Agent Workflows that Don’t Hallucinate Tasks</h3>
+          <p class="mt-2 text-sm text-slate-300">Use explicit tools, sandboxed side effects, and verifiers to keep agents honest.</p>
+          <a href="#" class="text-indigo-300 text-sm mt-3 inline-block">Read soon →</a>
+        </article>
+        <article class="rounded-2xl border border-white/10 p-5 bg-white/5">
+          <h3 class="font-semibold">Power BI Models for Ops: Cohorts & Forecasts</h3>
+          <p class="mt-2 text-sm text-slate-300">From daily snapshots to persuasive narratives for leadership.</p>
+          <a href="#" class="text-indigo-300 text-sm mt-3 inline-block">Read soon →</a>
+        </article>
+        <article class="rounded-2xl border border-white/10 p-5 bg-white/5">
+          <h3 class="font-semibold">ServiceNow as a Nerve System, Not a Ticket Sink</h3>
+          <p class="mt-2 text-sm text-slate-300">Inbound actions, CMDB as source of truth, and governance.</p>
+          <a href="#" class="text-indigo-300 text-sm mt-3 inline-block">Read soon →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 md:py-24 border-t border-white/5 bg-gradient-to-t from-slate-900/50 to-transparent">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <h2 class="text-2xl md:text-4xl font-bold">Let’s build something</h2>
+          <p class="mt-3 text-slate-300">Email me or drop a note. For Calendly/booking, add a link later.</p>
+          <ul class="mt-6 space-y-2 text-slate-300">
+            <li>📧 <a href="mailto:bniergarth@gmail.com" class="underline decoration-indigo-500/50 underline-offset-4">bniergarth@gmail.com</a></li>
+            <li>💼 <a href="https://www.linkedin.com/in/brian-niergarth-ab93617a/" class="underline decoration-indigo-500/50 underline-offset-4">LinkedIn</a></li>
+            <li>💻 <a href="https://github.com/NautilusProg" class="underline decoration-indigo-500/50 underline-offset-4">GitHub</a></li>
+          </ul>
+        </div>
+        <form action="mailto:bniergarth@gmail.com" method="post" enctype="text/plain" class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <label class="block text-sm">Name
+            <input required type="text" name="name" class="mt-1 w-full rounded-lg bg-black/30 border border-white/10 p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+          </label>
+          <label class="block text-sm mt-4">Email
+            <input required type="email" name="email" class="mt-1 w-full rounded-lg bg-black/30 border border-white/10 p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+          </label>
+          <label class="block text-sm mt-4">Message
+            <textarea required name="message" rows="4" class="mt-1 w-full rounded-lg bg-black/30 border border-white/10 p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+          </label>
+          <button class="mt-5 w-full px-4 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 font-medium">Send</button>
+          <p class="text-xs text-slate-400 mt-3">No backend yet—uses your mail client. Replace later with a serverless form.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-slate-400 flex flex-col md:flex-row items-center justify-between gap-2">
+      <p>© <span id="year"></span> Brian Niergarth. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="#home" class="hover:text-indigo-300">Back to top ↑</a>
+        <a href="sitemap.xml" class="hover:text-indigo-300">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle with localStorage
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    const saved = localStorage.getItem('theme');
+    if(saved === 'light'){document.body.classList.remove('bg-slate-950','text-slate-100');document.body.classList.add('bg-white','text-slate-900');}
+    themeToggle.addEventListener('click', ()=>{
+      const isDark = document.body.classList.contains('bg-slate-950');
+      if(isDark){
+        document.body.classList.remove('bg-slate-950','text-slate-100');
+        document.body.classList.add('bg-white','text-slate-900');
+        localStorage.setItem('theme','light');
+      } else {
+        document.body.classList.add('bg-slate-950','text-slate-100');
+        document.body.classList.remove('bg-white','text-slate-900');
+        localStorage.setItem('theme','dark');
+      }
+    })
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
